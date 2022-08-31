@@ -35,7 +35,7 @@ nav{
     font-size: 30px;
 }
 #search {
-    margin: 30px 350px;
+    margin: 40px 200px 0px;
 }
 #search > input{
     padding: 10px;
@@ -59,6 +59,7 @@ nav{
     color: inherit;
     font-size: 30px;
     font-family: inherit;
+    margin-top: 150px;
 }
 #hero-image > img{
     width: 800px;
@@ -84,4 +85,38 @@ nav{
 #card-image{
     width:300px;
     height: 300px;
+}
+#like-button{
+    margin-left: 20px;
+    padding: 5px;
+}
+#like-button:hover{
+    background-color: red;
+}
+#review-form > input{
+    padding: 10px;
+    width: 250px;
+}
+#review-form > button{
+    padding:10px;
+}
+ul{
+    background:darkcyan ;
+    color: inherit;
+}
+.footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding:30px;
+}
+#subscribe > input{
+    padding:10px;
+    width: 300px;
+}
+#subscribe > button{
+    padding: 10px;
+}
+.copyright{
+    border-top: 10px solid white;
 }
