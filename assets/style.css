@@ -72,6 +72,15 @@ nav{
     font-family: 'Anton', sans-serif;
     font-size: 30px;
     color: white;
+
+}
+.titles{
+ width: 300px;
+ background-color: white;
+ color: #000;
+ font-family: inherit;
+ font-size: x-large;
+ text-align: center;
 }
 .popular-books{
     display: flex;
@@ -84,7 +93,7 @@ nav{
 }
 .img{
     width:300px;
-    height: 300px;
+    height: 400px;
 }
 .like-button{
     color: white;

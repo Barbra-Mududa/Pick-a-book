@@ -1,5 +1,5 @@
 {
-    "books": [
+    "book1": [
       {
         "id": 1,
         "author": "Mark Manson",
@@ -16,8 +16,9 @@
                 "content":"A compilation of tactics,to avoid mistakes"
             }
         ]
-      },
-      {
+      }],
+    "book2":[
+        {
         "id": 2,
         "author": "Robert Greene",
         "title": "The 48 Laws of Power",
@@ -33,8 +34,10 @@
                 "content":"This book is an exception!"
             }
         ]
-      },
-      {
+      }
+    ],
+      "book3":[
+        {
         "id": 3,
         "author": "James Clear",
         "title": "Atomic Habits",
@@ -53,4 +56,3 @@
       }
     ]
 }
-    
