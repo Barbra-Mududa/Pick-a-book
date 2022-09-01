@@ -82,11 +82,11 @@ nav{
     color: white;
     margin-left: 20px;
 }
-#card-image{
+.img{
     width:300px;
     height: 300px;
 }
-#like-button{
+.like-button{
     color: white;
     font-size: 1.5rem;
     border: none;
@@ -94,7 +94,7 @@ nav{
     transition: color 300ms;
     cursor: pointer;
 }
-#like-button:hover{
+.like-button:hover{
     color: rgb(241, 71, 19);
 }
 .like-button:active {
@@ -103,11 +103,11 @@ nav{
 .like-button:focus {
     outline: none;
 }
-#review-form > input{
+.review-form > input{
     padding: 10px;
     width: 250px;
 }
-#review-form > button{
+.review-form > button{
     padding:10px;
 }
 ul{
@@ -164,4 +164,8 @@ ul{
 .copyright{
     border-top: 10px solid white;
     padding: 10px;
+    /* display: inline; */
+}
+.copyright p{
+    display: inline-block;
 }
