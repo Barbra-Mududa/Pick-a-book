@@ -1,7 +1,7 @@
 const base_url ="http://localhost:3000"
 const books1 = "http://localhost:3000/book1"
 const books2 = "http://localhost:3000/book2"
-
+const books3 = "http://localhost:3000/book3"
 
 // const popularBooks = document.getElementsByClassName("popular-books")
 // const updateBooks = (books) => {
@@ -40,7 +40,12 @@ const book2 = fetch(books2)
   const image1 = document.querySelector('#card-image1').src = data1[0].image
   const text1 = document.querySelector('#title1').innerHTML = data1[0].title
 })
-
+const book3 = fetch(books3)
+.then(res => res.json())
+.then((data1) => {
+  const image2 = document.querySelector('#card-image2').src = data1[0].image
+  const text2 = document.querySelector('#title2').innerHTML = data1[0].title
+})
 
 
 
