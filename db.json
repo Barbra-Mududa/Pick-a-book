@@ -1,19 +1,23 @@
 {
-    "images": [
+    "image0": [
       {
         "id": 1,
         "author": "Mark Manson",
         "title": "The Subtle Art of Not Giving a F*ck",
         "likes": 0,
         "image": "./assets/Images/Book1.jpg"
-      },
+      }
+    ],
+    "image1":[
       {
         "id": 2,
         "author": "Robert Greene",
         "title": "The 48 Laws of Power",
         "likes": 0,
         "image": "./assets/Images/Book2.jpg"
-      },
+      }
+    ],
+    "image2":[
       {
         "id": 3,
         "author": "James Clear",
@@ -25,31 +29,31 @@
     "reviews": [
         {
             "id": 1,
-            "imageId": 1,
+            "imageId": 0,
             "content": "A compilation of tactics,to avoid mistakes"
           },
           {
             "id": 2,
-            "imageId": 1,
+            "imageId": 0,
             "content": "A book of wisdom!"
           },
           {
             "id": 1,
-            "imageId": 2,
+            "imageId": 1,
             "content": "Interesting perspective!"
           },
           {
             "id": 2,
-            "imageId": 2,
+            "imageId": 1,
             "content": "This book is an exception!"
           },
           {
             "id": 1,
-            "imageId": 3,
+            "imageId": 2,
             "content": "Awesome guide!"
           },          {
             "id": 2,
-            "imageId": 3,
+            "imageId": 2,
             "content": "New habits, here I come!"
           }
     ]
