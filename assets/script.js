@@ -66,13 +66,13 @@ function renderReviews(){
 
 document.querySelector(".review-button").addEventListener("submit", (e) => {
   e.preventDefault()
-  e.reset()
-  returnReview(e.target.comment.value)
+  // e.reset()
+  // returnReview(e.target.comment.value)
 })
 function returnReview(returned){
   let ul =document.createElement('li')
   ul.textContent = returned
-  document.querySelector('#reviewList').appendChild(ul)
+  // document.querySelector('#reviewList').appendChild(ul)
 }
 
 

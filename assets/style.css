@@ -178,7 +178,13 @@ nav{
   justify-content: space-between;
   margin-top: 0px;
 }
-
+.footer-links{
+    display: inline-flex;
+}
+.footer-links h4{
+    font-size: 20px;
+    border-bottom: 2px solid;
+}
 .footer-links ul{
     background-color: inherit; 
    text-align: left;
