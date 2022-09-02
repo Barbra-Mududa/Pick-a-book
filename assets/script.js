@@ -12,6 +12,7 @@ const book1 = fetch(books1)
 .then((data) => {
   const image1 = document.querySelector('#card-image').src = data[0].image
   const text1 = document.querySelector('#title').innerHTML = data[0].title
+  const description = document.querySelector("#description").innerHTML = data[0].description
   let likes = 0;
   document.getElementById("like-button").addEventListener("click",() =>{
   likes += 1;
@@ -41,6 +42,7 @@ const book3 = fetch(books3)
 .then((data1) => {
   const image2 = document.querySelector('#card-image2').src = data1[0].image
   const text2 = document.querySelector('#title2').innerHTML = data1[0].title
+  const description2 = document.querySelector("#description2").innerHTML = data1[0].description
   let likes = 0;
   document.getElementById("like-button2").addEventListener("click",() =>{
   likes += 1;
@@ -63,11 +65,19 @@ function renderReviews(){
     });
   })
 }
-const myForm = document.getElementById("review-form").addEventListener('submit', function(event){
+const reviewForm = document.getElementById("review-form").addEventListener('submit', function(event){
   event.preventDefault()
   event.target.reset()
 })
-
+// const post = document.querySelector(".review-button").addEventListener('mouseover', (myFunction)=> {
+//   console.log("Double click me") 
+// })
+const subscribe = document.querySelector(".subscribe").addEventListener('click',() => {
+  return alert(`Welcome!Reading is Lit🔥`)
+})
+const search = document.querySelector(".button").addEventListener('click',()=>{
+  return alert('Explore our Mind-Hub🤩')
+})
 
 
 
