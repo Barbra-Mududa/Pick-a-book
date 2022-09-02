@@ -63,8 +63,10 @@ function renderReviews(){
     });
   })
 }
-document.querySelector("form").addEventListener("submit", (e) => {
+
+document.querySelector(".review-button").addEventListener("submit", (e) => {
   e.preventDefault()
+  e.reset()
   returnReview(e.target.comment.value)
 })
 function returnReview(returned){
@@ -72,64 +74,7 @@ function returnReview(returned){
   ul.textContent = returned
   document.querySelector('#reviewList').appendChild(ul)
 }
-// const listReview = document.getElementById("reviewList");
-// listReview.innerHTML = "";
-// function showReview(review) {
-//   const reviewList = document.createElement("li");
-//   reviewList.textContent = review;
-//   document.querySelector('#comments-list').appendChild(ul)
-// }
-// const userReviews = [];
-// const fetchReveiws = async () => {
-//   const response = await fetch()
-//   return await response.json()
-// }
-// function updateReviews(){
-//   userReviews.forEach((review) => {
-//     const reviewList = document.createElement("li");
-//     reviewList.textContent = review
-//     document.querySelector('#comments-list').appendChild(ul)
-//   })
-// }
-// function postReviews(review){
-//   fetch(reviews, {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       imageId: 1,
-//       content: `${comment}`,
-//   })
-// })
-// }
-// document.addEventListener("DOMContentLoaded", async () => {
-//   userReviews = await fetchReveiws();
-//   updateReviews(userReviews);
 
-//   form.addEventListener("submit", (e) => {
-//     e.preventDefault();
-//     e.reset();
-//     postReviews(e.target.comment.value);
-//   });
-// })
-// async function submitData(name, email) {
-//   let info = {name, email}
-//   try {
-//     const response = await fetch("http://localhost:3000/users",
-//       {
-//         method: "POST",
-//         headers: {
-//           "Content-Type": "application/json",
-//           "Accept": "application/json"
-//         },
-//         body: JSON.stringify(info)
-//       })
-//     const data = await response.json()
-//     document.body.innerHTML = data.id
-//   } catch (error) {
-//     document.body.innerHTML = error.message
-//   }
-// }
+
 
 
