@@ -6,17 +6,9 @@
         "title": "The Subtle Art of Not Giving a F*ck",
         "likes": 45,
         "image": "./assets/Images/Book1.jpg",
-        "review": [
-            {
-                "id":1,
-                "content":"A book of wisdom!"
-            },
-            {
-                "id":2,
-                "content":"A compilation of tactics,to avoid mistakes"
-            }
-        ]
-      }],
+        "description": "Argues that individuals should seek to find meaning through what they find to be important and only engage in values that they can control."
+      }
+    ],
     "book2":[
         {
         "id": 2,
@@ -24,17 +16,8 @@
         "title": "The 48 Laws of Power",
         "likes": 30,
         "image": "./assets/Images/Book2.jpg",
-        "review": [
-            {
-                "id":1,
-                "content":"Interesting perspective!"
-            },
-            {
-                "id":2,
-                "content":"This book is an exception!"
-            }
-        ]
-      }
+        "description": "how you can get it, what to do to defend yourself against the power of others and, most importantly, how to use it well and keep it."
+    }
     ],
     "book3":[
         {
@@ -43,17 +26,13 @@
         "title": "Atomic Habits",
         "likes": 25,
         "image": "./assets/Images/Book3.jpg",
-        "review": [
-            {
-                "id":1,
-                "content":"Awesome guide!"
-            },
-            {
-                "id":2,
-                "content":"New habits, here I come!"
-            }
-        ]
+        "description": ""
       }
+    ],
+    "review":[
+        {
+
+        }
     ],
     "users": [
             {
