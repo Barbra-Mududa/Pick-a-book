@@ -31,8 +31,20 @@
     ],
     "review":[
         {
-
-        }
+           "id":4,
+           "books1Id": 1,
+           "content":"Great choice!"
+        },
+        {
+            "id":5,
+            "books2Id": 2,
+            "content":"Awesome books for self-esteem boost!"
+        },
+        {
+            "id":6,
+            "books3Id": 3,
+            "content":"What a brilliant read!"
+        }    
     ],
     "users": [
             {

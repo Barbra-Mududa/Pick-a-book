@@ -2,6 +2,7 @@ const base_url ="http://localhost:3000"
 const books1 = "http://localhost:3000/book1"
 const books2 = "http://localhost:3000/book2"
 const books3 = "http://localhost:3000/book3"
+const reviews_url = "http://localhost:3000/review"
 
 
 
@@ -19,12 +20,6 @@ const book1 = fetch(books1)
   function updateLikes(){
   document.getElementById("like-count").textContent = `${likes} likes`;
   }
-  // let review = "";
-  // document.querySelector("#review-form").addEventListener('submit',(e)=>{
-  //   e.preventDefault()
-  //   e.target.reset()
-  //   returnReview2 =(e.target.review.value)
-  // })
 })
 const book2 = fetch(books2)
 .then(res => res.json())
@@ -40,21 +35,6 @@ const book2 = fetch(books2)
   document.getElementById("like-count1").textContent = `${likes} likes`;
   }
 })
-// let review = "";
-// const review1= fetch("http://localhost:3000/book1")
-// .then(res => res.json())
-// .then((freview2) => {
-//   freview2.forEach((freview2) => {
-//     const one = document.querySelector("#review-form1").addEventListener('submit',(e)=>{
-//       document.getElementById("comments-list").innerHTML = comments
-//       .map((freview) => `<li>${freview.comment.content}</li>`).join("");  
-//     e.preventDefault()
-//     e.target.reset()
-//     returnReview2 =(e.target.review.value)
-//     });
-// // });
-  
-// })
 
 const book3 = fetch(books3)
 .then(res => res.json())
@@ -69,38 +49,87 @@ const book3 = fetch(books3)
   function updateLikes(){
     document.getElementById("like-count2").textContent = `${likes} likes`;
   }
-
-  // let review = "";
-  // document.querySelector("#review-form2").addEventListener('submit',(e)=>{
-  //   e.preventDefault()
-  //   e.target.reset()
-  //   returnReview2 =(e.target.review.value)
-  // })
-  // function  returnReview2(review2){
-  //   let ul2 = document.createElement('li')
-  //   ul2.textContent = review2
-  //   document.querySelector("#review-list2").appendChild(ul)
-  // }
-  // console.log(review2)
 })
-
-async function submitData(name, email) {
-  let info = {name, email}
-  try {
-    const response = await fetch("http://localhost:3000/users",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify(info)
-      })
-    const data = await response.json()
-    document.body.innerHTML = data.id
-  } catch (error) {
-    document.body.innerHTML = error.message
-  }
+document.addEventListener("DOMContentLoaded", ()=>{
+  renderReviews();
+})
+function renderReviews(){
+  fetch(reviews_url)
+  .then((response) => response.json())
+  .then((reviews)=> {
+    reviews.forEach((review) => {
+      document.getElementById("reviewList").innerHTML = reviews 
+      .map((review) => `<li>${review.content}</li>`)
+    });
+  })
 }
+document.querySelector("form").addEventListener("submit", (e) => {
+  e.preventDefault()
+  returnReview(e.target.comment.value)
+})
+function returnReview(returned){
+  let ul =document.createElement('li')
+  ul.textContent = returned
+  document.querySelector('#reviewList').appendChild(ul)
+}
+// const listReview = document.getElementById("reviewList");
+// listReview.innerHTML = "";
+// function showReview(review) {
+//   const reviewList = document.createElement("li");
+//   reviewList.textContent = review;
+//   document.querySelector('#comments-list').appendChild(ul)
+// }
+// const userReviews = [];
+// const fetchReveiws = async () => {
+//   const response = await fetch()
+//   return await response.json()
+// }
+// function updateReviews(){
+//   userReviews.forEach((review) => {
+//     const reviewList = document.createElement("li");
+//     reviewList.textContent = review
+//     document.querySelector('#comments-list').appendChild(ul)
+//   })
+// }
+// function postReviews(review){
+//   fetch(reviews, {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       imageId: 1,
+//       content: `${comment}`,
+//   })
+// })
+// }
+// document.addEventListener("DOMContentLoaded", async () => {
+//   userReviews = await fetchReveiws();
+//   updateReviews(userReviews);
+
+//   form.addEventListener("submit", (e) => {
+//     e.preventDefault();
+//     e.reset();
+//     postReviews(e.target.comment.value);
+//   });
+// })
+// async function submitData(name, email) {
+//   let info = {name, email}
+//   try {
+//     const response = await fetch("http://localhost:3000/users",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "Accept": "application/json"
+//         },
+//         body: JSON.stringify(info)
+//       })
+//     const data = await response.json()
+//     document.body.innerHTML = data.id
+//   } catch (error) {
+//     document.body.innerHTML = error.message
+//   }
+// }
 
 
