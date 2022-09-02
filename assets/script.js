@@ -63,17 +63,10 @@ function renderReviews(){
     });
   })
 }
-
-document.querySelector(".review-button").addEventListener("submit", (e) => {
-  e.preventDefault()
-  // e.reset()
-  // returnReview(e.target.comment.value)
+const myForm = document.getElementById("review-form").addEventListener('submit', function(event){
+  event.preventDefault()
+  event.target.reset()
 })
-function returnReview(returned){
-  let ul =document.createElement('li')
-  ul.textContent = returned
-  // document.querySelector('#reviewList').appendChild(ul)
-}
 
 
 
