@@ -27,6 +27,7 @@ const book2 = fetch(books2)
 .then((data1) => {
   const image1 = document.querySelector('#card-image1').src = data1[0].image
   const text1 = document.querySelector('#title1').innerHTML = data1[0].title
+  const description1 = document.querySelector('#description1').innerHTML = data1[0].description
   let likes = 0;
   document.getElementById("like-button1").addEventListener("click",() =>{
   likes += 1;

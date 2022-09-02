@@ -16,7 +16,7 @@
         "title": "The 48 Laws of Power",
         "likes": 30,
         "image": "./assets/Images/Book2.jpg",
-        "description": "how you can get it, what to do to defend yourself against the power of others and, most importantly, how to use it well and keep it."
+        "description": "How you can get it, what to do to defend yourself against the power of others and, most importantly, how to use it well and keep it."
     }
     ],
     "book3":[
@@ -26,7 +26,7 @@
         "title": "Atomic Habits",
         "likes": 25,
         "image": "./assets/Images/Book3.jpg",
-        "description": ""
+        "description": "Guide to breaking bad behaviors and adopting good ones in four steps, showing you how small, incremental, everyday routines compound into massive, positive change over time."
       }
     ],
     "review":[

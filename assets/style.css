@@ -113,6 +113,11 @@ nav{
 .like-button:focus {
     outline: none;
 }
+.description{
+    width: 300px;
+    background-color: #114454;
+    color: white;
+}
 .review-section{
     padding: 50px;
     margin-top: 60px;
