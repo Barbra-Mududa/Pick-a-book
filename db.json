@@ -36,7 +36,7 @@
         ]
       }
     ],
-      "book3":[
+    "book3":[
         {
         "id": 3,
         "author": "James Clear",
@@ -54,5 +54,17 @@
             }
         ]
       }
-    ]
+    ],
+    "users": [
+            {
+                "name": "Dot",
+                "email": "dot@dot.com",
+                "id": 1
+            },
+            {
+                "name": "Dola",
+                "email": "dola@dola.com",
+                "id": 100
+            }
+]
 }
