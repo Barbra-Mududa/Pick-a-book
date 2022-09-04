@@ -8,12 +8,14 @@ const api_url ="https://openlibrary.org/authors/OL33421A.json"
 
 const search = document.querySelector(".button").addEventListener('click',()=>{
   return alert('Explore our Mind-Hub🤩')
-})
-
-const popup =document.querySelector("#popup").addEventListener('click', () => {
-  document.querySelector()
-})
-
+});
+const loginForm =document.querySelector(".login-form")
+const popup = document.querySelector("#popup").addEventListener("click", () => {
+  loginForm.style.display = "block";
+});
+const closePopup =document.querySelector(".close-btn").addEventListener("click", () => {
+  loginForm.style.display = "none";
+});
 const options = {
 	method: 'GET',
 	headers: {
