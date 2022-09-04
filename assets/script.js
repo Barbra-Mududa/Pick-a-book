@@ -3,8 +3,26 @@ const books1 = "http://localhost:3000/book1"
 const books2 = "http://localhost:3000/book2"
 const books3 = "http://localhost:3000/book3"
 const reviews_url = "http://localhost:3000/review"
+const users = "http://localhost:3000/users"
+const api_url ="https://openlibrary.org/authors/OL33421A.json"
 
 
+
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '8a5afc5a5fmshf3ec65db5398f08p18ceb1jsn7a22c14e1678',
+		'X-RapidAPI-Host': 'book4.p.rapidapi.com'
+	}
+};
+
+fetch('https://book4.p.rapidapi.com/', options)
+	.then(response => response.json())
+	.then(response => {
+
+  })
+	.catch(err => console.error(err));
 
 
 const book1 = fetch(books1)
@@ -53,26 +71,17 @@ const book3 = fetch(books3)
     document.getElementById("like-count2").textContent = `${likes} likes`;
   }
 })
-document.addEventListener("DOMContentLoaded", ()=>{
-  renderReviews();
+
+const form = document.querySelector("form").addEventListener('submit', (e) => {
+  e.preventDefault()
+  const input = form.review.value
+  const ul = document.getElementById(response)
+  const li = document.createElement('li')
+  li.innerHTML = `<li>${input}</li>`
+  ul.appendChild(li)
+  // form.reset()
 })
-function renderReviews(){
-  fetch(reviews_url)
-  .then((response) => response.json())
-  .then((reviews)=> {
-    reviews.forEach((review) => {
-      document.getElementById("reviewList").innerHTML = reviews 
-      .map((review) => `<li>${review.content}</li>`)
-    });
-  })
-}
-const reviewForm = document.getElementById("review-form").addEventListener('submit', function(event){
-  event.preventDefault()
-  event.target.reset()
-})
-// const post = document.querySelector(".review-button").addEventListener('mouseover', (myFunction)=> {
-//   console.log("Double click me") 
-// })
+
 const subscribe = document.querySelector(".subscribe").addEventListener('click',() => {
   return alert(`Welcome!Reading is Lit🔥`)
 })
