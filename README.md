@@ -5,7 +5,7 @@
 ## Table of Contents
 
 - [Description](#description)
-<!-- - [Technologies used](#technology-used) -->
+- [Technologies used](#technology-used)
 - [Setup](#setup)
 
 - [Deployment](deployment)
