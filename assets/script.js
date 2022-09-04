@@ -16,21 +16,23 @@ const popup = document.querySelector("#popup").addEventListener("click", () => {
 const closePopup =document.querySelector(".close-btn").addEventListener("click", () => {
   loginForm.style.display = "none";
 });
-const options = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '8a5afc5a5fmshf3ec65db5398f08p18ceb1jsn7a22c14e1678',
-		'X-RapidAPI-Host': 'book4.p.rapidapi.com'
-	}
-};
 
-fetch('https://book4.p.rapidapi.com/', options)
-	.then(response => response.json())
-	.then(response => {
-
-  })
-	.catch(err => console.error(err));
-
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '8a5afc5a5fmshf3ec65db5398f08p18ceb1jsn7a22c14e1678',
+// 		'X-RapidAPI-Host': 'skyscanner50.p.rapidapi.com'
+// 	}
+// };
+// const bookValue = document.querySelector(".button").addEventListener('submit', (e) =>{
+//   getBooks();
+// })
+// function getBooks(){fetch('https://openlibrary.org/works/OL45883W.json')
+// 	.then(res => res.json())
+// 	.then((data) => {
+//   const search = document.querySelector("#search").textContent = data.value
+// }).catch(err => console.error(err));
+// }
 
 const book1 = fetch(books1)
 .then(res => res.json())
@@ -81,7 +83,7 @@ const book3 = fetch(books3)
 
 const form = document.querySelector("form").addEventListener('submit', (e) => {
   e.preventDefault()
-  const input = form.review.value
+  const input = form.reviews.value
   const ul = document.getElementById(response)
   const li = document.createElement('li')
   li.innerHTML = `<li>${input}</li>`
