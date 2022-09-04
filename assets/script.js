@@ -6,8 +6,13 @@ const reviews_url = "http://localhost:3000/review"
 const users = "http://localhost:3000/users"
 const api_url ="https://openlibrary.org/authors/OL33421A.json"
 
+const search = document.querySelector(".button").addEventListener('click',()=>{
+  return alert('Explore our Mind-Hub🤩')
+})
 
-
+const popup =document.querySelector("#popup").addEventListener('click', () => {
+  document.querySelector()
+})
 
 const options = {
 	method: 'GET',
@@ -84,9 +89,6 @@ const form = document.querySelector("form").addEventListener('submit', (e) => {
 
 const subscribe = document.querySelector(".subscribe").addEventListener('click',() => {
   return alert(`Welcome!Reading is Lit🔥`)
-})
-const search = document.querySelector(".button").addEventListener('click',()=>{
-  return alert('Explore our Mind-Hub🤩')
 })
 
 

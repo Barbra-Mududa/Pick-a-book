@@ -26,24 +26,28 @@
                 <a href="#">Popular-books</a>
                 <a href="#">Contact Us</a>
             </div>
-            <div id="login-form">
-                <h2>Log in</h2>
-                <div class="loginform">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Enter email">
-                </div>
-                <div class="loginform">
-                    <label for="password" >Password</label>
-                    <input type="password"id="password" placeholder="Enter password">
-                </div>
-                <div class="loginform">
-                    <button id="login">Sign in</button>
-                </div>
-                <div class="loginform">
-                    <a href="#">Forgot password</a>
-                </div>
-            </div>
+            <div class="popup">
+                <button id="popup">LogIn</button>
+            </div>  
         </nav>
+        <div id="login-form">
+            <div class="close-btn">&times;</div>
+            <h2 id="log-title">Log in</h2>
+            <div class="loginform">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter email">
+            </div>
+            <div class="loginform">
+                <label for="password" >Password</label>
+                <input type="password"id="password" placeholder="Enter password">
+            </div>
+            <div class="loginform">
+                <button id="login">Sign in</button>
+            </div>
+            <div class="loginform">
+                <a href="#">Forgot password</a>
+            </div>
+        </div>
         <form id="search">
             <input type="search" class="form" placeholder="Search book by title">
             <button class="button" type="submit">Search</button> 
