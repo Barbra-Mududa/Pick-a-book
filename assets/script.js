@@ -2,9 +2,7 @@ const base_url ="http://localhost:3000"
 const books1 = "http://localhost:3000/book1"
 const books2 = "http://localhost:3000/book2"
 const books3 = "http://localhost:3000/book3"
-const reviews_url = "http://localhost:3000/review"
-const users = "http://localhost:3000/users"
-const api_url ="https://openlibrary.org/authors/OL33421A.json"
+const otherBooks ="http://localhost:3000/Other"
 
 const search = document.querySelector(".button").addEventListener('click',()=>{
   return alert('Explore our Mind-Hub🤩')
@@ -17,22 +15,23 @@ const closePopup =document.querySelector(".close-btn").addEventListener("click",
   loginForm.style.display = "none";
 });
 
-// const options = {
-// 	method: 'GET',
-// 	headers: {
-// 		'X-RapidAPI-Key': '8a5afc5a5fmshf3ec65db5398f08p18ceb1jsn7a22c14e1678',
-// 		'X-RapidAPI-Host': 'skyscanner50.p.rapidapi.com'
-// 	}
-// };
-// const bookValue = document.querySelector(".button").addEventListener('submit', (e) =>{
-//   getBooks();
-// })
-// function getBooks(){fetch('https://openlibrary.org/works/OL45883W.json')
-// 	.then(res => res.json())
-// 	.then((data) => {
-//   const search = document.querySelector("#search").textContent = data.value
-// }).catch(err => console.error(err));
+// const init = () => {
+//   const inputForm = document.querySelector('form');
+//   inputForm.addEventListener('submit', (event) => {
+//       event.preventDefault();
+//       const input = document.querySelector('.searchForm');
+
+//        fetch(otherBooks)
+//       .then(response => response.json())
+//       .then(data => {
+//       const otherTitle = document.querySelector('#bookInfo ').innerText = data.Othertitle;;
+//       const description0 = document.querySelector('#bookInfo ').innerText = data.description0;
+//       const author = document.querySelector('#bookInfo ').innerText = data.author;;
+//       event.reset();
+//     });
+//   });
 // }
+// document.addEventListener('DOMContentLoaded', init);
 
 const book1 = fetch(books1)
 .then(res => res.json())

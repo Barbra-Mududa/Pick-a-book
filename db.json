@@ -29,33 +29,25 @@
         "description": "Guide to breaking bad behaviors and adopting good ones in four steps, showing you how small, incremental, everyday routines compound into massive, positive change over time."
       }
     ],
-    "review":[
+    "Other": [
         {
-           "id":4,
-           "books1Id": 1,
-           "content":"Great choice!"
+            "id": 4,
+            "author":"Mark Manson",
+            "title":"The Existential Adulteration of Harry Potter",
+            "description":"When someone finally moves into the old, dark, musty house next door, two boys make an unusual friend."
         },
         {
-            "id":5,
-            "books2Id": 1,
-            "content":"Awesome books for self-esteem boost!"
+            "id": 5,
+            "author":"Sally Rooney",
+            "title":"Beautiful World, Where Are You",
+            "description":"Beautiful World, Where Are You is a new novel by Sally Rooney, the bestselling author of Normal People and Conversations with Friends.Alice, a novelist, meets Felix, who works in a warehouse, and asks him if he had like to travel to Rome with her. In Dublin, her best friend, Eileen, is getting over a break-up and slips back into flirting with Simon, a man she has known sinceBeautiful World."
         },
         {
-            "id":6,
-            "books3Id": 1,
-            "content":"What a brilliant read!"
-        }    
-    ],
-    "users": [
-            {
-                "name": "Dot",
-                "email": "dot@dot.com",
-                "id": 1
-            },
-            {
-                "name": "Dola",
-                "email": "dola@dola.com",
-                "id": 100
-            }
-]
+            "id": 6,
+            "author":"Jennifer L. Armentrou",
+            "title":"From Blood and Ash",
+            "description":"From Blood and Ash follows Poppy, who was chosen to be the Maiden. The Maiden must live a solitary life until she is given to the gods at her Ascension, a fate Poppy dreads, despite it being the highest honor."
+        }
+    ]
 }
+
