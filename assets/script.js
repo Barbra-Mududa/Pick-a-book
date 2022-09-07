@@ -2,11 +2,40 @@ const base_url ="http://localhost:3000"
 const books1 = "http://localhost:3000/book1"
 const books2 = "http://localhost:3000/book2"
 const books3 = "http://localhost:3000/book3"
-const otherBooks ="http://localhost:3000/Other"
+const otherBooks ="http://localhost:3000/other"
 
-const search = document.querySelector(".button").addEventListener('click',()=>{
-  return alert('Explore our Mind-Hub🤩')
-});
+
+const otherCardTemplate = document.querySelector("[data-book-template]")
+const bookContainer =document.querySelector(".book-card")
+const search = document.querySelector("#search")
+
+let others = [];
+search.addEventListener("input", (e) => {
+  const value = e.target.value.toLowerCase()
+  others.forEach(other => {
+    const visible = other.author.includes(value) || other.title.includes(value).toLowerCase()
+    other.element.classList.toggle("hide", !visible)
+  })
+})
+fetch(otherBooks)
+.then(res => res.json())
+.then (data => {
+  others = data.map(other => {
+    const card = otherCardTemplate.content.cloneNode(true).children[0]
+    const header = card.querySelector(".header")
+    const body = card.querySelector(".body")
+    const synopsis = card.querySelector("#synopsis")
+    header.textContent = other.author
+    body.textContent = other.title
+    synopsis.textContent = other.description
+    bookContainer.append(card)
+    return {author: other.author, title: other.title, description: other.description, element: card}
+  })
+})
+
+
+
+
 const loginForm =document.querySelector(".login-form")
 const popup = document.querySelector("#popup").addEventListener("click", () => {
   loginForm.style.display = "block";
@@ -15,23 +44,6 @@ const closePopup =document.querySelector(".close-btn").addEventListener("click",
   loginForm.style.display = "none";
 });
 
-// const init = () => {
-//   const inputForm = document.querySelector('form');
-//   inputForm.addEventListener('submit', (event) => {
-//       event.preventDefault();
-//       const input = document.querySelector('.searchForm');
-
-//        fetch(otherBooks)
-//       .then(response => response.json())
-//       .then(data => {
-//       const otherTitle = document.querySelector('#bookInfo ').innerText = data.Othertitle;;
-//       const description0 = document.querySelector('#bookInfo ').innerText = data.description0;
-//       const author = document.querySelector('#bookInfo ').innerText = data.author;;
-//       event.reset();
-//     });
-//   });
-// }
-// document.addEventListener('DOMContentLoaded', init);
 
 const book1 = fetch(books1)
 .then(res => res.json())
@@ -80,19 +92,46 @@ const book3 = fetch(books3)
   }
 })
 
-const form = document.querySelector("form").addEventListener('submit', (e) => {
-  e.preventDefault()
-  const input = form.reviews.value
-  const ul = document.getElementById(response)
-  const li = document.createElement('li')
-  li.innerHTML = `<li>${input}</li>`
-  ul.appendChild(li)
-  // form.reset()
-})
+// const form = document.querySelector("form").addEventListener('submit', (e) => {
+//   e.preventDefault()
+//   const input = form.reviews.value
+//   const ul = document.getElementById(response)
+//   const li = document.createElement('li')
+//   li.innerHTML = `<li>${input}</li>`
+//   ul.appendChild(li)
+//   // form.reset()
+// })
 
 const subscribe = document.querySelector(".subscribe").addEventListener('click',() => {
   return alert(`Welcome!Reading is Lit🔥`)
 })
+const review = document.querySelector("#review-input")
+review.onchange = function(){
+  this.value = this.value.toUpperCase()
+  text.innerHTML = input.value
+}
 
+// async function submitData(name, email) {
+//   let info = {name,email}
+//   try {
+//     const response = await fetch("http://localhost:3000/users",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//           "Accept": "application/json"
+//         },
+//         body: JSON.stringify(info)
+//       })
+//     const users = await response.json()
+//     let id = users.id
+//     let p = document.createElement("p")
+//     p.textContent = id
+//     document.body.appendChild(p)
+//   } catch (error) {
+//     document.body.innerHTML = error.message
+//   }
+// }
+// submitData("Barbs", "barbs@barbs.com");
 
 

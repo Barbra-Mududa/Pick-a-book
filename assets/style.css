@@ -108,6 +108,16 @@ nav{
     border-radius: 10px;
     width: 300px;   
 }
+.loginbtn {
+    background-color: darkcyan;
+     width: 100px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .5s; 
+} 
 .loginform a{
     color: white;
     font-weight: 700;
@@ -115,7 +125,7 @@ nav{
 .loginform a:hover{
     color: #000;
 }
-#search {
+/* #search {
     margin: 40px 200px 0px;
 }
 #search > input{
@@ -129,6 +139,50 @@ nav{
     border-radius: 200px;
     background-color: black;
     color: white;
+} */
+section{
+    margin-left: 150px;
+}
+.search-bar{
+   display: flex; 
+   flex-direction: column;
+   font-size: 30px;
+   gap: .10rem;
+   color: white;
+}
+.search-bar > input{
+    font-size: 20px;
+    width: 400px;
+    padding: 10px;
+}
+.book-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .10rem;
+    width: 900px;
+}
+.card{
+   border:1px solid #000;
+   background-color: white;
+   padding: 10px;
+   width: fit-content;
+ 
+}
+.card > .header{
+    margin-bottom: 10px;
+    font-family: 'Anton', sans-serif;
+    font-weight: 900;
+}
+.card > .body{
+    font-size: medium;
+    color: #000;
+    font-weight: 600;
+}
+.card > #synopsis {
+    margin-top: 5px;
+}
+.hide{
+    display: none;
 }
 .hero-section{
     display: flex;

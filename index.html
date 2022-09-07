@@ -33,6 +33,7 @@
         <div class="login-form">
             <div class="close-btn">&times;</div>
             <h2 id="log-title">Log in</h2>
+            <form action="index.html">
             <div class="loginform">
                 <label for="email">Email</label>
                 <input type="text" id="emailA" placeholder="Enter email">
@@ -42,21 +43,18 @@
                 <input type="password"id="password" placeholder="Enter password">
             </div>
             <div class="loginform">
-                <button id="login">Sign in</button>
+                <button  class= "loginbtn" type="submit">Login</button> 
             </div>
             <div class="loginform">
                 <a href="#">Forgot password</a>
             </div>
-        </div>
-        <form id="search">
-            <input type="search" class="searchForm" placeholder="Search book by title">
-            <button class="button" type="submit">Search</button> 
         </form>
-        <!-- <section id="bookInfo">
-            <h4>Title</h4>
-            <p>Author</p>
-            <p>Description</p>
-          </section> -->
+        </div>
+        <!-- <form id="search">
+            <input type="search" class="form" placeholder="Search book by title">
+            <button class="button" type="submit">Search</button> 
+        </form> -->
+
         <!-- hero section -->
         <div class="hero-section">
             <div id="hero-text">
@@ -105,12 +103,26 @@
                     <p>Describe book</p>
                 </div>
             </div> 
-        </div> 
+        </div>
+        <section>
+        <div class="search-bar">
+            <label for="search">Search</label>
+            <input type="search" id="search" data-search>
+        </div>
+        <div class="book-card"></div>
+        <template data-book-template>
+            <div class="card">
+                <div class="header"></div>
+                <div class="body"></div>
+                <div class="body" id="synopsis"></div>
+            </div>
+        </template> 
+         </section>
         <div class="review-section">
             <h2 id="review-title">Review Section</h2>           
             <form id="review-form" class="review-form">
-              <input id= "review-input" type="text" name="review" id="review" placeholder="Add a review..."> 
-              <button class="review-button" type="submit"ondblclick= "c()">Post</button> 
+              <input id= "review-input" type="text" name="review" placeholder="Add a review..."> 
+              <button class="review-button" type="submit">Post</button> 
             </form>
            <ul id="reviewList"></ul>
         </div> 
