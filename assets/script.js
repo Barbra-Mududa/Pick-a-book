@@ -105,11 +105,10 @@ const book3 = fetch(books3)
 const subscribe = document.querySelector(".subscribe").addEventListener('click',() => {
   return alert(`Welcome!Reading is Lit🔥`)
 })
-const review = document.querySelector("#review-input")
-review.onchange = function(){
-  this.value = this.value.toUpperCase()
-  text.innerHTML = input.value
-}
+const review = document.querySelector(".review-button").addEventListener('click',() => {
+  return alert(`Thank you for your Review 😁`)
+})
+
 
 // async function submitData(name, email) {
 //   let info = {name,email}
